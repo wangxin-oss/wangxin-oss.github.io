@@ -6,7 +6,7 @@ media_folder: "images"
 public_folder: "/images"
 collections:
   - name: "posts"
-    label: "文章"
+    label: "日志"
     folder: "_posts"
     create: true
     slug: "{{slug}}"
