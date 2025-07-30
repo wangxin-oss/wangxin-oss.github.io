@@ -1,8 +1,8 @@
 # 连接到 GitHub 仓库
 backend:
   name: github
-  repo: 你的用户名/你的仓库名  # 例如：octocat/my-blog
-  branch: main  # 部署分支（通常是 main 或 master）
+  repo: wangxin-oss/wangxin-oss.github.io 
+  branch: main
 
 # 媒体文件存储位置
 media_folder: "images/uploads"
