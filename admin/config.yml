@@ -1,0 +1,21 @@
+# 连接到 GitHub 仓库
+backend:
+  name: github
+  repo: 你的用户名/你的仓库名  # 例如：octocat/my-blog
+  branch: main  # 部署分支（通常是 main 或 master）
+
+# 媒体文件存储位置
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# 日志内容配置
+collections:
+  - name: "posts"
+    label: "日志"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "日志内容", name: "body", widget: "markdown"}
