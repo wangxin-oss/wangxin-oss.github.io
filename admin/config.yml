@@ -1,15 +1,11 @@
 backend:
   name: github
-  repo: wangxin-oss/wangxin-oss.github.io  # 你的仓库路径
-  branch: main  # 部署分支
-media_folder: "images"
-public_folder: "/images"
+  repo: wangxin-oss/wangxin-oss.github.io
+  branch: main
 collections:
-  - name: "posts"
-    label: "日志"
-    folder: "_posts"
+  - name: "test"
+    label: "测试"
+    folder: "test"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "内容", name: "body", widget: "markdown"}
