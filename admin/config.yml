@@ -1,9 +1,7 @@
 backend:
   name: github
-  repo: wangxin-oss/wangxin-oss.github.io  # 你的仓库路径
-  branch: main  # 部署分支
-media_folder: "images"
-public_folder: "/images"
+  repo: wangxin-oss/wangxin-oss.github.io 
+  branch: main  
 collections:
   - name: "posts"
     label: "日志"
