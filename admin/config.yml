@@ -1,13 +1,25 @@
 backend:
   name: github
-  repo: wangxin-oss/wangxin-oss.github.io 
-  branch: main  
+  repo: wangxin-oss/wangxin-oss.github.io  # 你的仓库路径
+  branch: main  # 部署分支
+
+# 新增：媒体文件存储配置（必填）
+media_folder: "assets/uploads"  # 媒体文件（图片等）在仓库中的存储路径（相对于仓库根目录）
+public_folder: "/assets/uploads"  # 网站中访问媒体文件的公共路径（通常与 media_folder 对应）
+
+# 新增：媒体库配置（必填）
+media_library:
+  name: "uploadcare"  # 使用默认的上传服务（无需额外配置）
+  config:
+    publicKey: "demopublickey"  # 测试用公钥，生产环境可替换为自己的 Uploadcare 公钥
+
+# 内容集合配置（保持不变或根据你的需求调整）
 collections:
   - name: "posts"
-    label: "日志"
+    label: "文章"
     folder: "_posts"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "内容", name: "body", widget: "markdown"}
+      - {label: "日期", name: "date", widget: "datetime"}
