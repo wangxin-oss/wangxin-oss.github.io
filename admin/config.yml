@@ -1,5 +1,5 @@
 backend:
-  name: netlify  # 注意冒号后必须有空格
+  name: git-gateway  # 注意冒号后必须有空格
   branch: main   # 与 Netlify 部署分支一致（main 或 master）
 
 # 其他配置（媒体文件夹、集合等）
