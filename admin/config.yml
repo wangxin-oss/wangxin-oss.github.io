@@ -1,20 +1,16 @@
 backend:
-  name: netlify  # 指定后端为 Netlify
-  branch: main   # 与你 Netlify 部署的分支一致（通常为 main 或 master）
+  name: netlify  # 注意冒号后必须有空格
+  branch: main   # 与 Netlify 部署分支一致（main 或 master）
 
-# 以下为其他基础配置（根据你的博客需求调整）
-media_folder: "assets/uploads"  # 媒体文件存储路径（相对于源码根目录）
-public_folder: "/assets/uploads"  # 媒体文件访问路径（相对于网站根目录）
+# 其他配置（媒体文件夹、集合等）
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "posts"  # 集合名称（自定义）
-    label: "博客文章"  # 在 CMS 中显示的名称
-    folder: "_posts"  # 文章存放的文件夹（如 Hexo 的 _posts）
-    create: true  # 允许创建新文章
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # 文章文件名格式
-    fields:  # 文章的字段（自定义）
+  - name: "posts"
+    label: "博客文章"
+    folder: "_posts"
+    create: true
+    fields:
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "内容", name: "body", widget: "markdown"}
-      - {label: "标签", name: "tags", widget: "list", default: []}
-      
